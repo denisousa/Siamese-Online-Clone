@@ -6,6 +6,7 @@ target/maven-status
 !**/src/main/**
 !**/src/test/**
 
+/search_results/*
 ### IntelliJ IDEA ###
 .idea
 *.iws

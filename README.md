@@ -16,6 +16,49 @@ built on top. It can scalably search for clones of Type-1 to Type-3/Type-4 from 
 4. Graphs will be genearated. They follow Zipf's law. Hooray!
 -->
 
+# New section for Siamese installation
+
+## 1. Configure Java context to Siamese
+```bash
+chmod +x java-install.sh && ./java-install.sh
+```
+
+### 2. Install Elasticseach context to Siamese
+```bash
+chmod +x elasticsearch-install.sh && ./elasticsearch-install.sh
+```
+
+### 3. Execute Elastisearch in background
+```bash
+./elasticsearch-2.2.0/bin/elasticsearch -d
+```
+
+## 4. Build Siamese
+```bash
+chmod +x siamese-build.sh && ./siamese-build.sh
+```
+
+## 5. Fill the configurations
+abra ''index-config.propertiees'' e coloque o repositório do projeto que você deseja que o Siamese realize a indexação:
+
+```bash
+inputFolder=<complete_path>
+```
+
+## 6. Indexing Siamese
+```bash
+java -jar siamese-0.0.6-SNAPSHOT.jar -cf index-config.properties
+```
+
+## 5. Search Siamese
+```bash
+java -jar siamese-0.0.6-SNAPSHOT.jar -cf search-config.properties
+```
+
+
+# Original README.md
+If you want more details about the installation and configuration you can read the rest of the README.md
+
 ## Build from Source:
 1\. Download elasticsearch-2.2.0 and extract to disk.
 
